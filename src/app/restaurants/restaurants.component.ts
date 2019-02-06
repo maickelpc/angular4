@@ -8,7 +8,7 @@ import { RestaurantsService } from './restaurants.service';
   selector: 'mt-restaurants',
   templateUrl: './restaurants.component.html',
   viewProviders: [Title]
-})
+}) 
 
 export class RestaurantsComponent implements OnInit {
 
@@ -25,7 +25,7 @@ export class RestaurantsComponent implements OnInit {
       this.restaurantsService.restaurants()
         .subscribe(restaurants => this.restaurants = restaurants);
     }catch(error){
-    
+
 
     }
 
