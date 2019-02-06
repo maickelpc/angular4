@@ -1,7 +1,7 @@
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 //import 'rxjs/add/operator/map';
-import { } from 'rxjs/add/operator/map';
-import 'rxjs/add/operator/mergeMap';
+// import { } from 'rxjs/add/operator/map';
+// import 'rxjs/add/operator/mergeMap';
 // Imports para router lazy personalizado
 import { Observable } from 'rxjs/Observable';
 
@@ -15,17 +15,17 @@ import { MenuComponent } from './restaurant-detail/menu/menu.component';
 import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component';
 import { OrderSummaryComponent } from './order-summary/order-summary.component';
 
-export class AppPreloadingStrategy implements PreloadingStrategy {
-    preload(route: Route, load: Function): Observable<any> {
-        const LOADROUTE = (delay) => delay ?
-              timer(150).pipe(flatMap(_ => load()))
-            : load();
-
-        return route.data && route.data.preload
-            ? LOADROUTE(route.data.delay)
-            : of(null);
-      }
-}
+// export class AppPreloadingStrategy implements PreloadingStrategy {
+//     preload(route: Route, load: Function): Observable<any> {
+//         const LOADROUTE = (delay) => delay ?
+//               timer(150).pipe(flatMap(_ => load()))
+//             : load();
+//
+//         return route.data && route.data.preload
+//             ? LOADROUTE(route.data.delay)
+//             : of(null);
+//       }
+// }
 
 export const ROUTES: Routes = [
   {path: '', component: HomeComponent},

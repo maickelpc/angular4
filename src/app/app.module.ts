@@ -19,7 +19,9 @@ import { ShoppingCartComponent } from './restaurant-detail/shopping-cart/shoppin
 import { MenuItemComponent } from './restaurant-detail/menu-item/menu-item.component';
 import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component';
 import { OrderSummaryComponent } from './order-summary/order-summary.component';
-import { SharedModule} from './shared/shared.module'
+import { SharedModule} from './shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,13 +37,14 @@ import { SharedModule} from './shared/shared.module'
     OrderSummaryComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     HttpModule,
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
     //RouterModule.forRoot(ROUTES), Carregamento padrão de lazys, somente quando chamados
-    RouterModule.forRoot(ROUTES, {preloadingStrategy: AppPreloadingStrategy}),
+    RouterModule.forRoot(ROUTES, {preloadingStrategy: PreloadAllModules  }),
     //CoreModule, importando separadamente
     //SharedModule, neste caso, importando separadamente
     SharedModule.forRoot() // Importando já com os providers do CoreModule
