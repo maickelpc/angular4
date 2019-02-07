@@ -20,7 +20,8 @@ import { MenuItemComponent } from './restaurant-detail/menu-item/menu-item.compo
 import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component';
 import { OrderSummaryComponent } from './order-summary/order-summary.component';
 import { SharedModule} from './shared/shared.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './security/login/login.component'
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
     ShoppingCartComponent,
     MenuItemComponent,
     ReviewsComponent,
-    OrderSummaryComponent
+    OrderSummaryComponent,
+    LoginComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -52,7 +54,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
   providers: [
 
     {provide: LOCALE_ID, useValue:'pt-BR' },
-    ,
+    
 
   ],
   bootstrap: [AppComponent]
